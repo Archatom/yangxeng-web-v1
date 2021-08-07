@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+/*=============================================
+=                  General                    =
+=============================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 56px;
+    font-family: 'Microsoft Jhenghei';
+}
+
+button:focus {
+    outline: none;
+}
+
+/*=============================================
+=                  Navbar                     =
+=============================================*/
+
+.navbar {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .11);
+}
+ .main-nav {
+    /* margin: auto; */
+  }
+   .main-nav .main-nav-style{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    transform: translateY(0px);
+    transition: .3s;
+  }
+   .main-nav .main-nav-style:hover{
+    transform: translateY(-5px);
+  }
+   .main-nav .main-nav-style:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0px;
+    height: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: .3s;
+  }
+   .main-nav .main-nav-style:hover:after{
+    left: 0;
+    right: 0;
+  }
+
+/*=============================================
+=                  Header                     =
+=============================================*/
+/* 加入背景圖片 */
+#header {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    /* padding: 200px 0; */
+    /* 100vh => 螢幕高度(viewport height)100% */
+    height: calc(100vh - 56px);
+    display: flex;
+    /* 讓內部元素垂直置中 */
+    align-items: center;
+    /* ../上一層的資料夾 */
+    background-image: url("");
+    background-size: cover;
+    /* 預設值background-position: left top; */
+    background-position: center top;
+    background-attachment: fixed;
+    /* 讓背景圖有視差的感覺 */
+    /* 固定背景 */
+    background-attachment: fixed;
+    /* filter濾鏡的意思 */
+    /* filter: brightness(0.5); */
+    /* background-repeat: no-repeat; */
+    position: relative;
+
+}
+/* 
+#header:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .3;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+#header:hover:after{
+    opacity: .6;
+}
+
+#header .container{
+    position: relative;
+    z-index: 2;
+} */
+.header-logo{
+    text-align: center;
+}
+.social-media{
+    text-align: center;
+}
+.header-icon1{
+    font-size: 40px;
+    color: rgb(0, 110, 255);
+}
+.header-icon2{
+    font-size: 40px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header-icon3{
+    font-size: 40px;
+    color: rgb(5, 204, 21);
+}
+/*=============================================
+=                  Intro                      =
+=============================================*/
+.intro-box {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: all .5s ease;
+    padding: 15px 15px;
+    text-align: center;
+    background-color: #17a2b8;
+}
+.intro-box:hover{
+    background-color: #d44c5e;
+    /* background: #b95663; */
+    /* opacity: .7; */
+    box-shadow: 0px 22px 22px rgba(0,0,0,.25);
+}
+
+.intro-line {
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px auto;
+    transition: all .5s ease;
+}
+
+.intro-box:hover .intro-line {
+    width: 40px;
+}
+.intro-box-text{
+    text-align: center;
+}
+/*=============================================
+=                  Features                   =
+=============================================*/
+/*=============================================
+=                  Reviews                    =
+=============================================*/
+
+/*=============================================
+=                  carousel                    =
+=============================================*/
+.carousel-indicators li{
+    border-radius: 50%;
+}
+/*=============================================
+=                  Gallery                    =
+=============================================*/
+/* 屬性選擇器 */
+/* id開頭是galleryImage */
+[id^='galleryImage'] {
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']>.gallery-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    transition: all .5s ease;
+    opacity: 0;
+    transform: scale(0) rotate(-720deg);
+}
+
+[id^='galleryImage']:hover {
+    filter: grayscale(0%);
+}
+
+[id^='galleryImage']:hover>.gallery-text {
+    transform: scale(1.5) rotate(0deg); 
+    opacity: 1;
+}
+
+/* 放入背景圖片 */
+
+#galleryImage1 {
+    background-image: url('../img/gallery-image-1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/gallery-image-2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/gallery-image-3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/gallery-image-4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/gallery-image-5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/gallery-image-6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/gallery-image-7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/gallery-image-8.jpg');
+}
+
+/*=============================================
+=                  Start Now                  =
+=============================================*/
+
+/*=============================================
+=                   Footer                    =
+=============================================*/
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
+.footer-text-color{
+    color: #176ab8;
+}
+
+#goBackBtn {
+    width: 40px;
+    height: 40px;
+    border:none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    border-radius: 50%;
+    background-color: rgb(250, 220, 48);
+}
+#goBackBtn:hover{
+    background-color: #17a2b8;
+}
+
+/*=============================================
+=                   AD-BOX                    =
+=============================================*/
+
+.ad-box {
+    width: 300px;
+    position: fixed;
+    right: -275px;
+    bottom: 80px;
+    z-index: 100;
+    /* background-color: rgb(255, 255, 255); */
+    /* border: 1px solid #ddd; */
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.ad-box.active {
+    right: 0px;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    /* border-right: 1px solid #ddd; */
+}
+
+.ad-toggle-btn {
+    width: 25px;
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.ad-toggle-btn>i {
+    transform: rotateZ(90deg);
+}
+
+.ad-toggle-btn:hover {
+    color: #666;
+}
+
+.right-part {
+    padding: 10px;
+    background-color: rgb(246, 225, 99);
+}
+
+.right-part>p{
+    margin-bottom: 0;
+}
+/*===================================*/
+/*============ 表單頁面 =============*/
+/*===================================*/
+.form-box {
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.form-header {
+    background-color: #d44c5e;
+    color: white;
+    padding: 15px 15px;
+}
+
+.form-header-title {
+    font-size: 24px;
+    margin: 0;
+    text-align:center;
+}
+
+.form-body {
+    padding: 20px 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 6px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6e7072;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #d44c5e;
+    border: 1px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 100px;
+}
+/*===================================*/
+/*============ 表單頁面第二版 ========*/
+/*===================================*/
+
+
+
+
+
+
+
+
+/*=============================================
+=                   @media                    =
+=============================================*/
+@media (max-width:576px){
+    .title-font-mb{
+        font-size: 2.2rem;
+    }
+    .sub-title-font-mb{
+        font-size: .8rem;
+    }
+    .carousel-rwd{
+        margin: 30px;
+    }
+
+}
